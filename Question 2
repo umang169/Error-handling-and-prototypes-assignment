@@ -1,0 +1,22 @@
+/* Create a function called getPerson that takes an object as a parameter representing a person's name and age.
+The function should return the person's name and age as a string in the format "Name: <name>, Age: <age>".
+However, if the parameter is not a valid object with the properties "name" and "age", the function should throw
+an error with the message "Invalid parameter type". Use try-catch to handle this error and return the error
+message if it occurs.*/
+
+function getPerson(info){
+  try{
+    if ("name" in info && "age" in info){
+      console.log(`name : ${info.name} , age : ${info.age}`)
+    }
+    else {
+      throw new Error("error")
+    }
+  }
+  catch{
+    console.log("Invalid parameter type")
+  }
+}
+getPerson({name:"vishal",age : 11 })  //name:"umang",age : 11
+getPerson({name:"ankit", salary : 20000}) //invalid parameter type
+
