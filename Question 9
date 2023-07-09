@@ -1,0 +1,12 @@
+/* Create a numberChecker function that takes an array of numbers as an argument and returns a function. The
+returned function should take another number as an argument and return true if the number is in the array, and
+false otherwise.*/
+
+function numberChecker(arr){
+  return function checkNum(num){
+    return arr.includes(num)
+  }
+}
+let CheakNumber = numberChecker([1,2,4,6,7])
+console.log(CheakNumber(8))
+console.log(CheakNumber(2))
